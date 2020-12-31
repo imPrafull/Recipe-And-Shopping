@@ -21,6 +21,8 @@ import { RecipeService } from './recipes/recipe.service';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { AuthGuard } from './auth/auth.guard';
+import { AlertComponent } from './shared/alert/alert.component';
+import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AuthGuard } from './auth/auth.guard';
     RecipeListComponent,
     RecipeStartComponent,
     ShoppingEditComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    AlertComponent,
+    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,9 @@ import { AuthGuard } from './auth/auth.guard';
       useClass: AuthInterceptorService,
       multi: true }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AlertComponent
+  ]
 })
 export class AppModule { }
