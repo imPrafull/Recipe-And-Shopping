@@ -6,6 +6,9 @@
 3) Add, Edit and Delete Ingredients
 4) The recipes can be stored online.
 
+## Demo
+Hosted on Firebase: https://recipe-and-shopping-61dca.web.app/auth
+
 ## Running the app
 
 Install all dependencies by running 'npm i'.
